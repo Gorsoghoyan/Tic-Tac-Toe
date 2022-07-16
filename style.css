@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Bangers', cursive;
+}
+
+body{
+    background: linear-gradient(90deg, rgb(151, 93, 93) 5%, rgba(100,165,180,1) 55%,rgba(5,49,73,1) 98%);
+}
+
+.title {
+    color: #ff3860b9;
+    animation:backInDown 2.5s ease-out;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 3%;
+}
+
+.display {
+    width: 400px;
+    height: 40px;
+    margin: 20px auto;
+    color: rgb(21, 78, 129);
+    font-size: 35px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    animation:flash 2.5s infinite;
+}
+
+#display-player {
+    color: #ff3860b9;
+}
+
+#board {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 25%;
+    position: relative;
+}
+
+.box{
+    border: 3px solid rgb(21, 78, 129);
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    cursor: pointer;
+}
+
+#time {
+    position: absolute;
+    top: 85%;
+    left: 55%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    letter-spacing: 5px;
+    color: #ff3860b9;
+}
+
+.message-div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.46);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.message-div .message-area {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: aliceblue;
+    margin-right: 30px;
+}
+.message-div .message-area #message-text {
+    font-family: sans-serif;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+.message-div .message-area #newGameStart-button {
+    width: 40%;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 3px;
+    background-color: rgb(0, 56, 69);
+    color: aliceblue;
+    border: none;
+}
+
+.wins {
+    width: 26%;
+    margin-left: 30px;
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.data-div {
+    text-align: start;
+    margin-top: 30px;
+}
+.data-div p {
+    margin: 20px 0;
+    letter-spacing: 4px;
+}
+
+.winner-line {
+    position: absolute;
+}
+.line-row-1,
+.line-row-2,
+.line-row-3,
+.line-column-1,
+.line-column-2,
+.line-column-3,
+.line-diagonal-1,
+.line-diagonal-2 {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    background-color: whitesmoke;
+    border-radius: 50px;
+}
+
+.line-row-1 {
+    height: 2%;
+    top: 15%;
+    left: 5%;
+}
+.line-row-2 {
+    height: 2%;
+    top: 50%;
+    left: 5%;
+}
+.line-row-3 {
+    height: 2%;
+    top: 83%;
+    left: 5%;
+}
+.line-column-1 {
+    width: 2%;
+    height: 90%;
+    left: 15%;
+    top: 5%;
+}
+.line-column-2 {
+    width: 2%;
+    height: 90%;
+    left: 50%;
+    top: 5%;
+}
+.line-column-3 {
+    width: 2%;
+    height: 90%;
+    left: 83%;
+    top: 5%;
+}
+.line-diagonal-1 {
+    width: 2%;
+    height: 100%;
+    left: 49%;
+    transform: rotate(45deg);
+}
+.line-diagonal-2 {
+    width: 2%;
+    height: 100%;
+    left: 49%;
+    transform: rotate(135deg);
+}
+
+
+.hidden {
+    display: none;
+}
