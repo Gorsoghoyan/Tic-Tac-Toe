@@ -149,3 +149,5 @@ function startNewGame () {
     boardInnerInfo.fill(null);
     boxs.forEach(box => box.innerText = "");
 }
+
+console.log("object");
